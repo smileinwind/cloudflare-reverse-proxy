@@ -72,7 +72,7 @@ export default {
     if (200 == response.status && type.includes("text/html")) {
       let text = await response.text();
       let pattern = /(https?:\/\/)(.*)/;
-      let replacement = "$1/proxy.gpt.iyunnan.org.cn/proxy/$2";
+      let replacement = "$1/proxy.iyunnan.org.cn/proxy/$2";
 
       let result = text.replace(pattern, replacement);
       //.replace( / src=["/']| srcset=["/']/g, 'src="./' +response.url);
